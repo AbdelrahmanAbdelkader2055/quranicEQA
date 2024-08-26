@@ -50,15 +50,15 @@ def open_popup(passage, question):
     
     # Create a StringVar for the dropdown menu
     selected_option = StringVar(popup)
-    selected_option.set("AraBERT V0.2")  # Set default option
+    selected_option.set("AraBERT")  # Set default option
     
     # Create a dropdown menu
-    options = ["AraBERT V0.2", "AraBERT V2 (Buggy)", "MARBERT"]
+    options = ["AraBERT", "MARBERT"]
     dropdown_menu = OptionMenu(popup, selected_option, *options, command=option_selected)
     dropdown_menu.pack(pady=10)
     
     global model_name  
-    model_name = 'model/araBert-quranQA-v0.2'
+    model_name = 'model/araBert-quranQA'
     
     # Create a frame to hold the Text widget and scrollbar
     text_frame = Frame(popup)
@@ -89,10 +89,8 @@ def open_popup(passage, question):
 
 def option_selected(option):
     global model_name  
-    if option == "AraBERT V0.2":
-        model_name = 'model/araBert-quranQA-v0.2'
-    elif option == "AraBERT V2 (Buggy)":
-        model_name = 'model/araBert-quranQA-v2-vanilla'
+    if option == "AraBERT":
+        model_name = 'model/araBert-quranQA'
     elif option == "MARBERT":
         model_name = 'model/MARBERT-quranQA'
 
