@@ -34,11 +34,15 @@ def get_answer_from_model(model_path, passage, question):
     answer = tokenizer.decode(answer_ids, skip_special_tokens=True)
     return answer
     
-from tkinter import Tk, Canvas, Entry, Button, PhotoImage, StringVar, OptionMenu, Text, Scrollbar, Frame
+from tkinter import Tk, Canvas, Entry, Button, PhotoImage, StringVar, OptionMenu, Text, Scrollbar, Frame,  messagebox
 
 model_name = ""
 
 def open_popup(passage, question):
+    if not passage.strip() or not question.strip():
+        messagebox.showwarning("Input Error", "Please enter an input")
+        return
+    
     global popup, text_widget
     
     window.destroy()
