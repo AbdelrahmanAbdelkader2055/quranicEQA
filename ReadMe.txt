@@ -1,10 +1,6 @@
-عشان المشروع يشتغل معاك لو هتستخدم النوتبوك اول الفايل البايثون, خد الفولدرين دول (اللي موجودين في ملف المضغوط) حطهم في نفس المكان اللي فيهم 
-"QuranQA.py" & "(Final) نظام_سؤال_وجواب_في_كتاب_الله_الكريم.ipynb"
-
+QuranGUI.Py requires the assets and model folders included in the first release of the program,
+you'll have to download both parts of the 7zip file in order to extract those two folders.
 Folder Names:
 "model" & "assets" (assets is located in the _internal folder)
 
-to compile QuranQA.py you need to install all the required libraries in "requirements.txt"
-use anaconda prompt and enter the following command given that you changed the directory to the same one "requirements.txt" is at:
-
-pip install -r requirements.txt
+to compile QuranQA.py you need to install the required libraries in "requirements.txt" after creating your new environement in anaconda prompt.
